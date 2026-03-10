@@ -1,7 +1,7 @@
 {
-  "name": "dasheats",
-  "version": "1.0.55",
-  "description": "Aplicativo Desktop para Impressao DashEats",
+  "name": "dash-eats-impressora",
+  "version": "1.0.56",
+  "description": "Aplicativo Desktop para Impressão DashEats",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -22,8 +22,8 @@
     "socket.io-client": "^4.8.3"
   },
   "build": {
-    "appId": "com.dasheats.printer",
-    "productName": "DashEats",
+    "appId": "com.dasheats.impressora",
+    "productName": "Impressora DashEats",
     "win": {
       "target": "nsis",
       "icon": "assets/icon.ico",
@@ -32,8 +32,8 @@
       "artifactName": "Dash-Eats-Impressora-Setup.${ext}"
     },
     "nsis": {
-      "oneClick": true,
-      "allowToChangeInstallationDirectory": false,
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
       "allowElevation": false
     },
     "publish": [
