@@ -1,39 +1,20 @@
 {
-  "name": "dash-eats-impressora",
-  "version": "1.0.59",
-  "description": "Aplicativo Desktop para Impressão DashEats",
+  "name": "dasheats-printer",
+  "version": "1.0.60",
+  "description": "Impressora DashEats",
   "main": "main.js",
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-builder --win",
-    "publish": "electron-builder --win -p always",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "author": "DashEats",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "dotenv": "^17.3.1",
-    "electron-updater": "^6.3.9",
-    "jimp": "^1.6.0",
-    "node-thermal-printer": "^4.6.0",
-    "png-to-ico": "^3.0.1",
-    "socket.io-client": "^4.8.3"
-  },
   "build": {
-    "appId": "com.dasheats.impressora",
+    "appId": "com.dasheats.printer",
     "productName": "Impressora DashEats",
     "win": {
       "target": "nsis",
-      "icon": "assets/icon.ico",
-      "publisherName": "DashEats",
-      "artifactName": "Dash-Eats-Impressora-Setup.${ext}"
+      "icon": "assets/icon.ico"
     },
     "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "allowElevation": false,
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false,
       "packElevateHelper": false
     },
     "publish": [
@@ -52,6 +33,14 @@
       "package.json"
     ],
     "asar": true
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "electron-updater": "^6.3.9",
+    "jimp": "^1.6.0",
+    "node-thermal-printer": "^4.6.0",
+    "png-to-ico": "^3.0.1",
+    "socket.io-client": "^4.8.3"
   },
   "devDependencies": {
     "electron": "^34.5.8",
