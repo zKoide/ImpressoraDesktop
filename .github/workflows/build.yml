@@ -32,4 +32,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           release: true
         env:
-          CSC_SKIP_SIGNING: true
+          # Aqui ele vai usar os segredos que você criou para assinar o app na nuvem
+          CSC_LINK: ${{ secrets.CERTIFICATE_PFX_BASE64 }}
+          CSC_KEY_PASSWORD: ${{ secrets.CERTIFICATE_PASSWORD }}

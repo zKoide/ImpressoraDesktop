@@ -1,6 +1,6 @@
 {
   "name": "dash-eats-impressora",
-  "version": "1.0.57",
+  "version": "1.0.59",
   "description": "Aplicativo Desktop para Impressão DashEats",
   "main": "main.js",
   "scripts": {
@@ -27,14 +27,14 @@
     "win": {
       "target": "nsis",
       "icon": "assets/icon.ico",
-      "forceCodeSigning": false,
-      "signAndEditExecutable": true,
+      "publisherName": "DashEats",
       "artifactName": "Dash-Eats-Impressora-Setup.${ext}"
     },
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "allowElevation": false
+      "allowElevation": false,
+      "packElevateHelper": false
     },
     "publish": [
       {
